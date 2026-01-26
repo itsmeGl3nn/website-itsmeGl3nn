@@ -16,11 +16,11 @@ export function UnderConstruction() {
           </div>
         </div>
 
-        <h1 className="text-6xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 animate-pulse">
+        <h1 className="font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 animate-pulse" style={{ fontSize: "clamp(2.5rem, 10vw, 5rem)" }}>
           Under Construction
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in-delayed">
+        <p className="text-gray-300 mb-8 leading-relaxed animate-fade-in-delayed" style={{ fontSize: "clamp(1rem, 4vw, 1.5rem)" }}>
           Something amazing is being built here. Check back soon!
         </p>
 
@@ -31,7 +31,7 @@ export function UnderConstruction() {
         </div>
 
         <div className="mt-12">
-          <p className="text-gray-400 text-sm mb-4 animate-fade-in-delayed-2">
+          <p className="text-gray-400 mb-4 animate-fade-in-delayed-2" style={{ fontSize: "clamp(0.75rem, 2vw, 1rem)" }}>
             In the meantime, feel free to reach out:
           </p>
           <div className="flex justify-center gap-6 flex-wrap">
