@@ -36,7 +36,7 @@ export function UnderConstruction() {
           </p>
           <div className="flex justify-center gap-6 flex-wrap">
             <a
-              href="https://github.com"
+              href="https://github.com/itsmeGl3nn"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-200 transition-all duration-300 transform hover:scale-105"
@@ -51,7 +51,7 @@ export function UnderConstruction() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/glenn-tolentino/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-200 transition-all duration-300 transform hover:scale-105"
@@ -66,7 +66,7 @@ export function UnderConstruction() {
               LinkedIn
             </a>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:tolentinog945@gmail.com"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-200 transition-all duration-300 transform hover:scale-105"
             >
               <svg
