@@ -8,7 +8,11 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import { Navbar } from "./components/navbar";
 import "./app.css";
+
+// Set to true to show Under Construction page and hide navbar
+export const UNDER_CONSTRUCTION = true;
 
 export const links: Route.LinksFunction = () => [
   { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
@@ -43,7 +47,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  if (UNDER_CONSTRUCTION) {
+    return <Outlet />;
+  }
+
+  return (
+    <>
+      <Navbar />
+      <main className="pt-16">
+        <Outlet />
+      </main>
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
