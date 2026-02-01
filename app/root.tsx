@@ -12,7 +12,7 @@ import { Navbar } from "./components/navbar";
 import "./app.css";
 
 // Set to true to show Under Construction page and hide navbar
-export const UNDER_CONSTRUCTION = false;
+export const UNDER_CONSTRUCTION = true;
 
 export const links: Route.LinksFunction = () => [
   { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
