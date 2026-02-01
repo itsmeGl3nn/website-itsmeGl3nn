@@ -1,6 +1,16 @@
 import type { Route } from "./+types/home";
 import { UnderConstruction } from "../welcome/under-construction";
 import { UNDER_CONSTRUCTION } from "../root";
+import { Navbar } from "../components/navbar";
+import { ProfileCard } from "../components/cards/ProfileCard";
+import { MapCard } from "../components/cards/MapCard";
+import { SpotifyCard } from "../components/cards/SpotifyCard";
+import { OfflineCard } from "../components/cards/OfflineCard";
+import { TwitterCard } from "../components/cards/TwitterCard";
+import { HowItStartedCard } from "../components/cards/HowItStartedCard";
+import { BusinessCardsCard } from "../components/cards/BusinessCardsCard";
+import { NewsletterCard } from "../components/cards/NewsletterCard";
+
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -15,15 +25,27 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
-      <div className="text-center">
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-orange-400 bg-clip-text text-transparent mb-4">
-          Welcome
-        </h1>
-        <p className="text-gray-400 text-lg">
-          This is my personal website
-        </p>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      
+      {/* HOME SECTION */}
+      <section id="all" className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 pt-20 pb-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-max">
+            <ProfileCard />
+            <MapCard />
+            <SpotifyCard />
+            <OfflineCard />
+            <TwitterCard />
+            <HowItStartedCard />
+            <BusinessCardsCard />
+            <NewsletterCard />
+          </div>
+        </div>
+      </section>
+
+
+    </>
   );
 }
