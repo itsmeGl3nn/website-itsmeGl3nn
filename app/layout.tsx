@@ -1,9 +1,11 @@
-import { siteConfig } from '@/config/site';
+import { siteConfig, UNDER_CONSTRUCTION } from '@/config/site';
 import { montserrat, poppins } from '@/utils/fonts';
 import { cn } from '@/utils/lib';
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { ThemeProvider } from './providers';
+import Navbar from '@/components/navbar';
+import { FilterProvider } from '@/utils/filter-context';
 
 import './globals.css';
 
@@ -54,7 +56,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <html lang='en' suppressHydrationWarning>
             <body className={cn(poppins.className, montserrat.variable, 'dark:bg-dark-950 bg-gray-100 antialiased')}>
                 <ThemeProvider attribute='class' enableSystem={false}>
-                    {children}
+                    <FilterProvider>
+                        {!UNDER_CONSTRUCTION && <Navbar />}
+                        {children}
+                    </FilterProvider>
                 </ThemeProvider>
                 <Analytics />
             </body>

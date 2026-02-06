@@ -1,3 +1,5 @@
+export const UNDER_CONSTRUCTION = false;
+
 export const siteConfig = {
     title: 'Glenn Tolentino',
     description: 'I am a software engineer based in Manila, Philippines.',

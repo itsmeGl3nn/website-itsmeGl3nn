@@ -1,16 +1,20 @@
-import Container from '@/components/ui/container';
 import GridLayout from '@/components/grid/layout';
 import { gridItems, layouts } from '@/config/grid';
-import { siteConfig } from '@/config/site';
+import { siteConfig, UNDER_CONSTRUCTION } from '@/config/site';
 import GridItem from '@/components/grid/item';
+import { UnderConstruction } from './under-construction';
 
 export default function Home() {
+    if (UNDER_CONSTRUCTION) {
+        return <UnderConstruction />;
+    }
+
     return (
         <>
-            <Container as='header' className='flex items-center justify-between py-0'>
-                <h1 className='hidden'>{siteConfig.title}</h1>
-            </Container>
-            <main className='py-8'>
+            <header className='sr-only'>
+                <h1>{siteConfig.title}</h1>
+            </header>
+            <main className='pt-24 pb-8'>
                 <GridLayout layouts={layouts}>
                     {gridItems.map((item) => (
                         <GridItem key={item.i} id={item.i} component={item.component} />
