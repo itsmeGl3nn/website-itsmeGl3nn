@@ -1,0 +1,27 @@
+import profile from '@/public/images/profile.jpg';
+import Image from 'next/image';
+import Card from '../../ui/card';
+import { siteConfig } from '@/config/site';
+
+export default function Description() {
+    return (
+        <Card className='flex flex-col justify-center gap-4 p-8'>
+            <div className='relative size-14 overflow-hidden rounded-full sm:size-16'>
+                <Image
+                    src={profile}
+                    alt={siteConfig.title}
+                    fill
+                    sizes='64px'
+                    className='object-cover'
+                    placeholder='blur'
+                    priority
+                />
+            </div>
+            <p className='leading-relaxed'>
+                Hi, I&apos;m <span className='font-montserrat text-xl'>Glenn</span>, a software engineer from
+                Manila, Philippines.{' '}
+                <span className='hidden md:inline'>I love building reliable software and learning new things.</span>
+            </p>
+        </Card>
+    );
+}
