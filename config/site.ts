@@ -1,4 +1,4 @@
-export const UNDER_CONSTRUCTION = false;
+export const UNDER_CONSTRUCTION = true;
 
 export const siteConfig = {
     title: 'Glenn Tolentino',
